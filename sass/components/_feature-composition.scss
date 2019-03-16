@@ -1,0 +1,123 @@
+.feature-composition {
+    position: relative;
+    width: 80%;
+    height: 25rem;
+    margin: 0 auto 4rem auto;
+    
+    @include respond(tab-land) {
+        width: 85%;
+    }
+    
+    @include respond(tab-port) {
+        width: 90%;
+    }
+    
+    @include respond(phone) {
+        width: 70%;
+        height: auto;
+    }
+    
+    @include respond(big-desktop) {
+        width: 70%;
+    }
+    
+    &__box {
+        position: relative;
+        float: left;
+        width: 30%;
+        height: auto;
+        background-color: rgba($color-cornsilk, .6);
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        border-radius: 3px;
+        box-shadow: 0 1rem 4rem rgba($color-black, .5);
+        outline-offset: 1rem;
+        outline: .3rem solid transparent;
+        transition: all .4s;
+        z-index: 10;
+        margin-left: 1.666%;
+        margin-right: 1.666%;
+        
+        @include respond(tab-port) {
+            //float: left;
+            //position: relative;
+            //width: 33.333333%;
+            box-shadow: 0 1rem 3rem rgba($color-black, .15);
+        }
+        
+        @include respond(phone) {
+            width: 100%;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+                
+        &--1 {
+            //top: 0;
+            //left: 3rem;
+            border: .3rem solid $color-3;
+            
+            /*
+            @include respond(tab-port) {
+                top: 0;
+                left: 0;
+            }
+            
+            @include respond(phone) {
+                top: 0;
+                left: 0;
+            }
+            */
+        }
+        
+        &--2 {
+            //top: 23rem;
+            //left: 18%;
+            border: .3rem solid $color-2;
+            z-index: 20;
+            /*
+            @include respond(tab-port) {
+                top: 61%;
+                left: 20%;
+            }
+            @include respond(phone) {
+                top: 0;
+                left: 0;
+            }
+            */
+        }
+        
+        &--3 {
+            //top: 4rem;
+            //right: -2rem;
+            border: .3rem solid $color-4;
+            
+            /*
+            @include respond(tab-port) {
+                top: 2rem;
+                right: 0;                
+            }
+            @include respond(phone) {
+                top: 0;
+                left: 0;
+            }
+            */
+        }
+                    
+        &:hover {
+            outline: 1rem solid rgba($color-primary, .9);
+            background-color: rgba($color-cornsilk, .8);
+            border: none;
+            transform: scale(1.05);
+            z-index: 100;
+        }
+        
+    }
+    
+    &__text {
+        font-size: 1.4rem;
+        padding: 1rem 3rem;
+    }  
+
+    
+}

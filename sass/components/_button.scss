@@ -1,0 +1,58 @@
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        padding: 1.4rem 2.9rem;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        box-shadow: 0 2rem 4rem transparent;
+        transition: all .2s;
+        
+        // Change for the <button> element
+        cursor: pointer;
+        
+        @include respond(tab-land) { 
+            font-size: 1.5rem;
+            padding: 1.3rem 1.8rem;
+        }
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-cornsilk;
+        color: $color-primary;
+        border: 1px solid $color-cornsilk;
+    }
+    
+    &--blue {
+        background-color: $color-primary;
+        color: $color-cornsilk;
+    }
+    
+    &--transparent {
+        background-color: transparent;
+        color: $color-cornsilk;
+        border: 1px solid $color-cornsilk;
+    }
+
+    &--animated {
+        animation: moveInUp 1s ease-out 2.7s;
+        animation-fill-mode: backwards;
+    }
+}

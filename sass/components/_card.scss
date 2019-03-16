@@ -1,0 +1,226 @@
+.card {
+    
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    position: relative;
+    height: 20rem;
+    
+    &__side {
+        height: 20rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        width: 90%;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+                
+        &--avers {
+            &-1 {
+                background-color: $color-primary; 
+            }
+            
+            &-2 {
+                
+                background-color: $color-2; 
+            }
+            
+            &-3 {
+                
+                background-color: $color-3; 
+            }
+            
+            &-4 {
+                
+                background-color: $color-7; 
+            }
+            
+            &-5 {
+                
+                background-color: $color-8; 
+            }
+            
+            &-6 {
+                
+                background-color: $color-6; 
+            }
+            
+            &-7 {
+                
+                background-color: $color-primary-light-2; 
+            }
+            
+            &-8 {
+                background-color: $color-2; 
+            }
+        }
+
+        &--revers {
+            transform: rotateY(-180deg);
+        }
+        
+    }
+    
+    &:hover &__side--avers,
+    &:active &__side--avers {
+            transform: rotateY(180deg);            
+    }
+        
+    &:hover &__side--revers,
+    &:active &__side--revers {
+            transform: rotateY(0);
+    }
+     
+    
+// FRONT SIDE STYLING
+    
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-cornsilk;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);                
+    }
+    
+    &__arrow {
+        color: $color-cornsilk;
+        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+    }
+    
+// BACK SIDE STYLING
+    
+    &__side {
+        
+        &--revers {
+            background-color: $color-cornsilk;
+            
+        }
+    }
+    
+    /*
+    &__picture {
+        background-size: cover;
+        height: 65%;
+        background-blend-mode: hue;
+        
+        &--1 {
+            background-image: linear-gradient(to right bottom, lighten($color-1, 10%), darken($color-1, 10%)), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-2, darken($color-2, 20%)), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--3 {
+            background-image: linear-gradient(to right bottom, lighten($color-3, 10%), darken($color-3, 10%)), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--4 {
+            background-image: linear-gradient(to right bottom, $color-4, darken($color-4, 20%)), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--5 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--6 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--7 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary), 
+                url(../img/card-1.jpg);
+        }
+        
+        &--8 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary), 
+                url(../img/card-1.jpg);
+        }
+    } */
+    
+    &__details {
+        padding: 2rem 2rem;
+        font-size: 1.5rem;  
+        
+        @include respond(phone) {
+            padding: 1.5rem 1rem;
+            font-size: 1.3rem; 
+        }
+    }
+    
+    &__list {
+        list-style: none;
+    }
+    
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+        
+        @include respond(phone) {
+            &:not(:last-child) {
+                margin-bottom: .8rem;
+            }
+        }
+    }
+    
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 1.5rem;
+        
+        @include respond(phone) {
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 1.2rem;
+        }
+        
+        &--1 {
+            fill: $color-primary;
+        }
+        
+        &--2 {
+            fill: $color-2;
+        }
+        
+        &--3 {
+            fill: $color-3;
+        }
+        
+        &--4 {
+            fill: $color-7;
+        }
+        
+        &--5 {
+            fill: $color-8;
+        }
+        
+        &--6 {
+            fill: $color-6;
+        }
+        
+        &--7 {
+            fill: $color-primary-light-2;
+        }
+        
+        &--8 {
+            fill: $color-2;
+        }
+    }
+    
+}

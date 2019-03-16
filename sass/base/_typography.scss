@@ -1,0 +1,182 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;       
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    color: $color-cornsilk;
+    
+    &--sub {
+        display: block;
+        font-size: 145%;
+        letter-spacing: 3.7rem;
+        animation: fadeIn 1.3s ease-out 2s;
+        animation-fill-mode: backwards;
+        
+        @include respond(tab-land) { 
+            font-size: 130%; 
+            letter-spacing: 3rem;
+        }
+        
+        @include respond(phone) {
+            font-size: 120%;
+            letter-spacing: 2.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        @include respond(mini-phone) {
+            font-size: 100%;
+            letter-spacing: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--main {
+        display: inline-block;
+        font-size: 600%;
+        font-weight: 900;
+        
+        @include respond(tab-land) { 
+            font-size: 500%; 
+        }
+        
+        @include respond(phone) {
+            font-size: 400%;
+        }
+        
+        @include respond(mini-phone) {
+            font-size: 270%;
+        }
+    }
+}
+
+
+.assemblage {
+    margin-top: -4rem; 
+    transform: translateX(-1rem);
+    
+    &__word {
+        display: none;
+    }
+    
+    .letter-1 {
+        color: $color-1;
+        animation: moveInRight 1s ease-in;
+        animation-fill-mode: backwards;
+    }
+
+    .letter-2 {
+        color: $color-2;
+        animation: twinkle 1s ease-out 0.4s;
+        animation-fill-mode: backwards;
+    }
+
+    .letter-3 {
+        color: $color-3;
+        animation: moveInDown 1s ease-out .8s;
+        animation-fill-mode: backwards;
+    }
+
+    .letter-4 {
+        color: $color-4;
+        animation: moveInUpBounce 1.4s ease-out 1.2s;
+        animation-fill-mode: backwards;
+    }
+
+    .letter-5 {
+        color: $color-1;
+        animation: moveInDownRotate 1.4s ease-out 1.6s;
+        animation-fill-mode: backwards;
+    }
+
+    .letter-6 {
+        color: $color-6;
+        animation: moveInLeft 1s ease-out 2s;
+        animation-fill-mode: backwards;
+    }
+}
+
+
+.subheading {
+    text-transform: uppercase;
+    font-size: 175%;
+    font-weight: 600;
+    letter-spacing: 2.8rem;
+    color: $color-cornsilk;
+    margin-top: -4.8rem;
+    animation: fadeIn 1.3s ease-out 2.5s;
+    animation-fill-mode: backwards;
+    
+    @include respond(tab-land) { 
+        font-size: 160%; 
+        letter-spacing: 2.2rem;
+        margin-top: -3rem;
+    }
+    
+    @include respond(phone) {
+        font-size: 140%;
+        letter-spacing: 1.8rem;
+        margin-top: -2rem;
+    }
+    
+    @include respond(mini-phone) {
+        font-size: 110%;
+        letter-spacing: 1.1rem;
+        margin-top: -2rem;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;    
+    text-transform: uppercase;
+    font-weight: 600;
+    color: transparent;
+    background-image: linear-gradient(to right, $color-primary 0%, $color-3 50%, $color-primary 100%);
+    -webkit-background-clip: text;
+    letter-spacing: .3rem;
+    display: inline-block;
+    transition: all .2s;
+      
+    &--blue-bg {
+        background-image: linear-gradient(to right, $color-cornsilk-warmest 0%, $color-cornsilk 50%, $color-cornsilk-warmest 100%);
+    }
+    
+    &--green {
+        background-image: linear-gradient(to right, $color-primary 0%, $color-2 50%, $color-primary 100%);
+    }
+    
+    &:hover {
+        transform: scale(1.08) translateY(-2px);    
+    }
+    
+    @include respond(tab-port) { 
+        font-size: 3rem;
+        letter-spacing: .2rem;
+    }
+    
+    @include respond(mini-phone) {
+        font-size: 2rem;
+    }
+}
+
+.heading-tertiary {
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+    @include respond(mini-phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.4rem;
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}

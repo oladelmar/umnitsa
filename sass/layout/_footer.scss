@@ -1,0 +1,63 @@
+.footer {
+    background-image: linear-gradient(to right bottom, $color-primary-light-2, $color-primary);
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+    color: $color-grey-light;
+    
+    &__logo-box {
+        text-align: center;
+                
+        & .assemblage {
+            padding: 3rem;
+            text-transform: uppercase;
+            font-size: .4rem;
+            font-weight: 300 !important;
+        }
+    }
+    
+    &__navigation {
+        text-align: center;
+        
+        @include respond(tab-port) {
+            margin-bottom: -2rem;
+        }
+    }
+    
+    &__list {
+        list-style: none;        
+    }
+    
+    &__item {
+        display: inline-block;
+        
+        &:not(:last-of-type) {
+            margin-right: 1.5rem;
+        }
+    }
+    
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-cornsilk;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            
+            transition: all .2s;
+        }
+        
+        &:hover {
+            color: $color-1;
+            font-weight: 600;
+            transform: rotate(-7deg) scale(1.15);
+        }
+        
+        &:active {
+            color: $color-2;
+        }
+    }
+    
+    &__copyright {
+        text-align: center;
+    }
+}

@@ -1,0 +1,71 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary, 0.8)), 
+        url(../img/p1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh);
+    
+    &__text-box {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        transform: translate(-30%, -40%);
+        text-align: center;
+        
+        @include respond(tab-land) { 
+            //left: 35%;
+            //transform: translate(-20%, -40%);
+        }
+        
+        @include respond(tab-port) { 
+            width: 80%;
+            left: 20%;
+            transform: translate(-8%, -40%);
+        }
+        
+        @include respond(phone) { 
+            top: 30%;
+        }
+    }
+        
+    &__btn-box {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        
+        & .btn--transparent {
+            margin-right: 1rem;
+            
+            @include respond(mini-phone) { 
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        & .btn--white {
+            margin-left: 1rem;
+            @include respond(mini-phone) { 
+                margin-left: 0;
+            }
+        }
+        
+                
+        @include respond(tab-port) { 
+            width: 70%;
+            left: 30%;
+            transform: translate(-20%, -50%);
+        }
+        
+        @include respond(phone) { 
+            top: 70%;
+        }
+    }
+
+}
+
